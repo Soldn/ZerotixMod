@@ -1,0 +1,8 @@
+{
+  "screen.zerotix.title": "Zerotix",
+  "screen.zerotix.play": "Зайти на Zerotix",
+  "screen.zerotix.options": "Настройки",
+  "screen.zerotix.quit": "Выйти из игры",
+  "screen.zerotix.cancel": "Отмена",
+  "screen.zerotix.reason": "Причина: %s"
+}
