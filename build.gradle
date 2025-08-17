@@ -1,19 +1,35 @@
-plugins {
-    id 'net.minecraftforge.gradle' version '5.1.+'
-}
-
-group = 'com.zerotixmod'
-version = '1.0.0'
-archivesBaseName = 'ZerotixMod'
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(8)
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net' }
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:4.1.25'
     }
 }
 
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
+version = "1.0"
+group = "com.zerotix" // твой пакет
+archivesBaseName = "zerotixmod"
+
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+
 minecraft {
-    mappings channel: 'official', version: '1.16.5'
+    mappings channel: 'snapshot', version: '20210309-1.16.5'
+    runs {
+        client {
+            workingDirectory project.file('run')
+            args '--username', 'Dev'
+        }
+        server {
+            workingDirectory project.file('run')
+        }
+    }
 }
 
 dependencies {
@@ -23,12 +39,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title"     : "ZerotixMod",
-            "Specification-Vendor"    : "zerotix",
-            "Specification-Version"   : "1",
-            "Implementation-Title"    : project.name,
-            "Implementation-Version"  : project.version,
-            "Implementation-Vendor"   : "zerotix",
+            "Specification-Title": "zerotixmod",
+            "Specification-Vendor": "zerotix",
+            "Specification-Version": "1", 
+            "Implementation-Title": project.name,
+            "Implementation-Version": project.version,
+            "Implementation-Vendor" :"zerotix",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
