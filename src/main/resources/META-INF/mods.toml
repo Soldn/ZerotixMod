@@ -6,6 +6,4 @@ license="MIT"
 modId="zerotixmod"
 version="1.0.0"
 displayName="Zerotix Mod"
-description='''
-Example Minecraft mod for 1.16.5
-'''
+description='''Пример мода Zerotix для Forge 1.16.5'''
