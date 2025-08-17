@@ -1,0 +1,11 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+
+[[mods]]
+modId="zerotixmod"
+version="1.0.0"
+displayName="Zerotix Mod"
+description='''
+Example Minecraft mod for 1.16.5
+'''
