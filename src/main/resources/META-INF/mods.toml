@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+
+license="All Rights Reserved"
+
+[[mods]]
+modId="zerotix"
+version="${file.jarVersion}"
+displayName="Zerotix"
+authors="Zerotix Team"
+description='''Custom menu and auto-connect to mc.zerotix.fun'''
+
+[[dependencies.zerotix]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+
+[[dependencies.zerotix]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
